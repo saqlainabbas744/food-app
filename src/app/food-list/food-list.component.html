@@ -1,0 +1,13 @@
+<div *ngFor="let item of foodItems" style="margin: 20px;">
+  <mat-card>
+    <mat-card-title>{{ item.name }}</mat-card-title>
+    <mat-card-content>
+      <ul>
+        <li *ngFor="let ingredient of item.ingredients">{{ ingredient }}</li>
+      </ul>
+      <p>Prep Time: {{ item.prepTimeMinutes }} minutes</p>
+      <p>Cook Time: {{ item.cookTimeMinutes }} minutes</p>
+      <p>Servings: {{ item.servings }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
